@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    background-image: url("images/baseball_field.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #fff;
+}
+
