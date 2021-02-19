@@ -1,7 +1,7 @@
 # BaseballGame
 Baseball game for 201 final project
 
-Version 1.0.0
+Version 1.0.0  
 Create basic frame using html and css. 
 That is add title, place holder for input and buttons. Also set background image.
 Next todo:
