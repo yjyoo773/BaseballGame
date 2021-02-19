@@ -1,67 +1,86 @@
-body{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    background-image: url("images/baseball_field.jpg");
-    /* Fit image to browser */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: #fff;
+body {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("images/baseball_field.jpg");
+  /* Fit image to browser */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
 }
 
-.title{
-    font-family: 'Playball', cursive;
-    font-size: 4rem;
-    padding: 3% 15% 1%;
+/* Title */
+.title {
+  font-family: "Playball", cursive;
+  font-size: 4rem;
+  padding: 3% 15% 1%;
+}
+
+/* Input */
+input{
+    margin: auto;
+    height: 40px;
+    font-size: 1.3rem;
+}
+.input-num{
+    width: 250px;
+}
+
+/* Number Buttons */
+.nums {
+  outline: none;
+  border: 2px solid #404b69;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 900;
+  color: #da0463;
+  text-shadow: 3px 0 #dbedf3;
+  border-radius: 15px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 10px;
+  background-color: #fff;
+}
+.nums:hover {
+  background-color: #e7f2f8;
+}
+.nums:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
 
-.nums{
-    outline: none;
-    border: 2px solid #404B69;
-    font-size: 2.5rem;
-    /* font-family: 'Arvo', cursive; */
-    /* line-height: 2; */
-    font-weight: 900;
-    color: #DA0463;
-    text-shadow: 3px 0 #DBEDF3;
-    border-radius: 15px;
-    /* display: inline-block; */
-    width: 100px;
-    height: 100px;
-    text-align: center;
+/* Card */
+.card {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 1% 2%;
+  border-radius: 5%;
+}
+.card-header{
+    font-size: 1.2rem;
+    font-weight: 600;
     margin: 10px;
-    background-color: #fff;
 }
-.nums:hover{
-    background-color: #E7F2F8;
-    ;
+.guess {
+  background-color: #cdcdcd;
+  color: #da0463;
 }
-.card{
-    display: inline-block;
-    width: 300px;
-    height: 300px;
-    margin: 1% 2%;
-    border-radius: 5%;
+.scoreboard {
+  background-color: #111;
+  height: 200px;
 }
-
-.guess{
-    background-color: #cdcdcd;
-    color: #DA0463;
-}
-.scoreboard{
-    background-color: #111;
-    height: 200px;
-}
-.howToPlay{
-    display: inline;
+.howToPlay {
+  display: inline;
 }
 
-#footer{
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 1%;
-    width: 100%;
-    height: 2.5rem; 
+#footer {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  height: 2.5rem;
 }
