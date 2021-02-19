@@ -13,3 +13,8 @@ Version 1.0.1
 - Change text font
 - Make style changes for index.html
 
+Version 1.0.2
+- Add JavaScript for buttons
+- Add forms for input number and limit to 3 digit numbers
+- Create basic algorithm for game
+- Deploy site https://yjyoo773.github.io/BaseballGame/
