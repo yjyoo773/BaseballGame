@@ -14,7 +14,12 @@
   </head>
   <body>
     <h1 class="title">The Baseball Game</h1>
-    <h2>Your Number</h2>
+  
+    <form>
+        <input class="input-num" type="text" pattern="\d*" maxlength="3" placeholder="Guess Your Number">
+        <input type="submit" value="OK" />
+    </form>
+
     <div class="firstRow">
       <button class="no1 nums">1</button>
       <button class="no2 nums">2</button>
@@ -31,10 +36,10 @@
     </div>
 
     <div class="scoreboard card">
-      <h4>Scoreboard</h4>
+    <h4 class="card-header">Scoreboard</h4>
     </div>
     <div class="guess card">
-      <h4>Guess History</h4>
+      <h4 class="card-header">Guess History</h4>
     </div>
     <footer id="footer">
       <div class="howToPlay">How to Play</div>
