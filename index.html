@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baseball Num</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>The Baseball Game</h1>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playball&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="title">The Baseball Game</h1>
     <h2>Your Number</h2>
     <div class="firstRow">
-        <button class="no1">1</button>
-        <button class="no2">2</button>
-        <button class="no3">3</button>
-        <button class="no4">4</button>
-        <button class="no5">4</button>
+      <button class="no1 nums">1</button>
+      <button class="no2 nums">2</button>
+      <button class="no3 nums">3</button>
+      <button class="no4 nums">4</button>
+      <button class="no5 nums">5</button>
     </div>
     <div class="secondRow">
-        <button class="no6">6</button>
-        <button class="no7">7</button>
-        <button class="no8">8</button>
-        <button class="no9">9</button>
-        <button class="no0">0</button>
+      <button class="no6 nums">6</button>
+      <button class="no7 nums">7</button>
+      <button class="no8 nums">8</button>
+      <button class="no9 nums">9</button>
+      <button class="no0 nums">0</button>
     </div>
+
+    <div class="scoreboard card">
+      <h4>Scoreboard</h4>
+    </div>
+    <div class="guess card">
+      <h4>Guess History</h4>
+    </div>
+    <footer id="footer">
+      <div class="howToPlay">How to Play</div>
+      <a href="">About Us</a>
+      <a href="">Rank</a>
+    </footer>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
