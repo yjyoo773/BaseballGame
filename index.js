@@ -41,6 +41,10 @@ function getResultAddToArray(ansString) {
   resultArray[outcomeNum] = outcome + " || " + guessString;
   outcomeNum++;
   document.getElementById("buttonNumberInput").innerHTML = "";
+  if (ansString === guessString){
+    if(alert('You Win!')){}
+    else    window.location.reload(); 
+  }
   x = Array();
 }
 
@@ -61,9 +65,17 @@ for (var i = 0; i < document.querySelectorAll(".nums").length; i++) {
     if (x.length > 3) {
       x.shift();
     }
-    console.log(x.slice(0, 3));
+    // console.log(x.slice(0, 3));
+    x = x.slice(0,3);
     document.getElementById("buttonNumberInput").innerHTML = x
       .join("")
       .toString();
   });
+}
+
+
+function resetInputNumber(){
+  var emptyArray = Array();
+  document.getElementById("buttonNumberInput").innerHTML = emptyArray;
+  x = Array();
 }
