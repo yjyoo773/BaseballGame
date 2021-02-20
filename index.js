@@ -16,25 +16,58 @@ function ranNumList() {
 // Set guesing number
 const randomNum = ranNumList()[Math.floor(Math.random() * ranNumList().length)];
 
-
 // Basic Algorthim for Game
-var ans = 143;
-var guess = 124;
 
-var ansString = ans.toString();
-var guessString = guess.toString();
+var ansString = randomNum.toString();
+// var guessString = guess.toString();
 
-var strike = 0;
-var ball = 0;
 
-for (var i=0;i<ansString.length;i++){
-  if (ansString[i] == guessString[i]){
-    strike++;
+var outcome;
+var outcomeNum = 0;
+var resultArray = Array();
+
+function getResultAddToArray(ansString, guessString) {
+  var strike = 0;
+  var ball = 0;
+  for (var i = 0; i < ansString.length; i++) {
+    if (ansString[i] == guessString[i]) {
+      strike++;
+    } else if (guessString.includes(ansString[i])) {
+      ball++;
+    }
   }
-  else if(guessString.includes(ansString[i])){
-        ball++;
-  }
+  // alert(strike + " " + ball);
+  outcome =  "S: " + strike + " B: " + ball;
+  resultArray[outcomeNum] = outcome + "  " + guessString;
+  outcomeNum++;
+  alert(outcome + "  " + guessString);
 }
+
+function getResultAddToArray2(ansString) {
+  var strike = 0;
+  var ball = 0;
+  var guessString = document.getElementById('userInputNum').value;
+  for (var i = 0; i < ansString.length; i++) {
+    if (ansString[i] == guessString[i]) {
+      strike++;
+    } else if (guessString.includes(ansString[i])) {
+      ball++;
+    }
+  }
+  outcome =  "S: " + strike + " B: " + ball;
+  resultArray[outcomeNum] = outcome + " || " + guessString;
+  outcomeNum++;
+  document.getElementById('userInputNum').value = '';
+}
+
+function displayResultArray(){
+  let e = "<hr/>"
+  for(var y = 0; y <resultArray.length;y++){
+    e+=`${resultArray[y]}<br/>`;
+  }  
+  document.getElementById("results").innerHTML = e;
+}
+
 
 // Detect button click
 let x = [];
