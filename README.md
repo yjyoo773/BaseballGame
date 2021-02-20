@@ -26,3 +26,7 @@ Version 1.0.3
 Version 1.0.4
 - Change input so can be done pushing buttons => maybe make keyboards possible too?
 - scoreboard position fixed
+
+Version 1.0.5
+- When user matches number refresh page to start again
+- Create reset button to clear input
