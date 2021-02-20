@@ -14,25 +14,32 @@
   </head>
   <body>
     <h1 class="title">The Baseball Game</h1>
-    <input
+    <form>
+      <!-- <input
         id="userInputNum"
         class="inputNum input"
         name="guessString"
         type="text"
         pattern="\d*"
+        required
+        minlength="3"
         maxlength="3"
         placeholder="Guess Your Number"
-      />
+      /> -->
+      <div id="buttonNumberInput" class="input">Guess Your Number</div>
       <button
         class="input"
         id="numInputButton"
         type="button"
-        onclick="getResultAddToArray2(randomNum);displayResultArray();"
-
+        onclick="getResultAddToArray(randomNum);displayResultArray();"
+        value="OK"
       >
-      <!-- <button type="submit"> -->
         OK
       </button>
+      <!-- OK
+    </input> -->
+    </form>
+
     <div class="firstRow">
       <button class="no1 nums">1</button>
       <button class="no2 nums">2</button>
@@ -47,14 +54,21 @@
       <button class="no9 nums">9</button>
       <button class="no0 nums">0</button>
     </div>
-
-    <div class="scoreboard card">
-      <h4 class="card-header">Scoreboard</h4>
-    </div>
-    <div class="guess card">
-      <h4 class="card-header">Guess History</h4>
-      <div id = "results"></div>
-    </div>
+    <table>
+      <tr>
+        <td>
+          <div class="scoreboard card">
+            <h4 class="card-header">Scoreboard</h4>
+          </div>
+        </td>
+        <td>
+          <div class="guess card">
+            <h4 class="card-header">Guess History</h4>
+            <div id="results"></div>
+          </div>
+        </td>
+      </tr>
+    </table>
     <footer id="footer">
       <div class="howToPlay">How to Play</div>
       <a href="">About Us</a>
