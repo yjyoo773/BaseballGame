@@ -23,6 +23,6 @@ Version 1.0.3
 - Full function of input
 - When pressing ok, input number and score result is displayed on guess history
 
-Version 1.04
+Version 1.0.4
 - Change input so can be done pushing buttons => maybe make keyboards possible too?
 - scoreboard position fixed
