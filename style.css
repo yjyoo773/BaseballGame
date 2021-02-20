@@ -27,6 +27,12 @@ body {
   width: 250px;
 }
 
+#buttonNumberInput {
+  background-color: blue;
+  width: 250px;
+  display: inline-block;
+}
+
 /* Number Buttons */
 .nums {
   outline: none;
@@ -52,12 +58,16 @@ body {
 }
 
 /* Card */
+table {
+  margin: auto;
+}
 .card {
   display: inline-block;
   width: 300px;
   height: 300px;
   margin: 1% 2%;
   border-radius: 5%;
+  position: relative;
 }
 .card-header {
   font-size: 1.2rem;
