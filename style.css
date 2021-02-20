@@ -18,13 +18,13 @@ body {
 }
 
 /* Input */
-input{
-    margin: auto;
-    height: 40px;
-    font-size: 1.3rem;
+.input {
+  margin: auto;
+  height: 40px;
+  font-size: 1.3rem;
 }
-.input-num{
-    width: 250px;
+.inputNum {
+  width: 250px;
 }
 
 /* Number Buttons */
@@ -47,10 +47,9 @@ input{
   background-color: #e7f2f8;
 }
 .nums:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
-
 
 /* Card */
 .card {
@@ -60,10 +59,10 @@ input{
   margin: 1% 2%;
   border-radius: 5%;
 }
-.card-header{
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 10px;
+.card-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px;
 }
 .guess {
   background-color: #cdcdcd;
@@ -80,7 +79,6 @@ input{
 #footer {
   font-size: 1.5rem;
   position: absolute;
-  bottom: 1%;
   width: 100%;
   height: 2.5rem;
 }
