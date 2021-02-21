@@ -117,3 +117,21 @@ function resetInputNumber() {
   document.getElementById("buttonNumberInput").innerHTML = emptyArray;
   x = Array();
 }
+
+window.addEventListener("load",function(){
+	document.querySelector(".trigger_popup")
+	.addEventListener("click",function(){
+		document.querySelector('.hover_bkgr')
+		.style.display = 'block'
+	});
+	document.querySelector(".hover_bkgr")
+	.addEventListener("click",function(){
+		document.querySelector('.hover_bkgr')
+		.style.display = 'none'
+	});
+	document.querySelector(".popupCloseButton")
+	.addEventListener("click",function(){
+		document.querySelector('.hover_bkgr')
+		.style.display = 'none'
+	});
+})
