@@ -8,12 +8,39 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playball&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playball&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <h1 class="title">The Baseball Game</h1>
+    <div id="bg">
+      <img src="images/baseball_field.jpg" alt="background-img" />
+    </div>
+    <a class="trigger_popup header_element">How to Play</a>
+    <div class="hover_bkgr">
+      <span class="vertCenter"></span>
+      <div>
+        <div class="popupCloseButton">&times;</div>
+        <p class="howToPlayText">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper
+          eget duis at tellus at urna condimentum mattis pellentesque.
+          Condimentum lacinia quis vel eros. Quis risus sed vulputate odio ut
+          enim blandit volutpat maecenas. Nunc eget lorem dolor sed viverra
+          ipsum. Interdum velit laoreet id donec ultrices tincidunt arcu.
+          Aliquet nec ullamcorper sit amet risus nullam. Tincidunt dui ut
+          ornare lectus sit amet. Sed velit dignissim sodales ut eu sem.
+          Ultrices gravida dictum fusce ut placerat orci. Aliquam purus sit
+          amet luctus venenatis lectus magna. Pellentesque sit amet porttitor
+          eget dolor morbi non. In hac habitasse platea dictumst vestibulum
+          rhoncus est. Purus non enim praesent elementum facilisis leo vel.
+          Bibendum arcu vitae elementum curabitur vitae nunc.
+        </p>
+      </div>
+    </div>
+    <a class="header_element" href="">About Us</a>
+    <a class="header_element" href="">Rank</a>
+    <a href=""><h1 class="title">The Baseball Game</h1></a>
     <form>
       <div id="buttonNumberInput" class="input">Guess Your Number</div>
       <button
@@ -55,11 +82,13 @@
             <h4 class="card-header">Scoreboard</h4>
             <table>
               <tr class="ballLight">
+                <td class="scoreIdentifier">O</td>
                 <td><div class="bulb"></div></td>
                 <td><div class="bulb"></div></td>
                 <td><div class="bulb"></div></td>
               </tr>
               <tr class="strikeLight">
+                <td class="scoreIdentifier">S</td>
                 <td><div class="bulb"></div></td>
                 <td><div class="bulb"></div></td>
               </tr>
@@ -74,11 +103,7 @@
         </td>
       </tr>
     </table>
-    <footer id="footer">
-      <div class="howToPlay">How to Play</div>
-      <a href="">About Us</a>
-      <a href="">Rank</a>
-    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
