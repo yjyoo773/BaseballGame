@@ -33,5 +33,5 @@ Version 1.0.5
 - Functionalize Scoreboard lights
 
 Version 1.0.6
-- Utilize pop up for how to play
+- Utilize pop up for how to play and add description for how to play
 - Move footer to header for better visualization
