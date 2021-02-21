@@ -30,3 +30,7 @@ Version 1.0.4
 Version 1.0.5
 - When user matches number refresh page to start again
 - Create reset button to clear input
+
+Version 1.0.6
+- Utilize pop up for how to play
+- Move footer to header for better visualization
