@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baseball Num</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playball&display=swap"
@@ -22,25 +22,19 @@
       <div>
         <div class="popupCloseButton">&times;</div>
         <p class="howToPlayText">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper
-          eget duis at tellus at urna condimentum mattis pellentesque.
-          Condimentum lacinia quis vel eros. Quis risus sed vulputate odio ut
-          enim blandit volutpat maecenas. Nunc eget lorem dolor sed viverra
-          ipsum. Interdum velit laoreet id donec ultrices tincidunt arcu.
-          Aliquet nec ullamcorper sit amet risus nullam. Tincidunt dui ut
-          ornare lectus sit amet. Sed velit dignissim sodales ut eu sem.
-          Ultrices gravida dictum fusce ut placerat orci. Aliquam purus sit
-          amet luctus venenatis lectus magna. Pellentesque sit amet porttitor
-          eget dolor morbi non. In hac habitasse platea dictumst vestibulum
-          rhoncus est. Purus non enim praesent elementum facilisis leo vel.
-          Bibendum arcu vitae elementum curabitur vitae nunc.
+          Number baseball game is by guessing each digit from 0 to 9 that
+          specify a different 3-digit number.
+          <br />If you match the digit number and order, that is a strike.
+          <br />If you only match the number but not the order, it’s a ball.
+          <br />For instance if the answer is 123, and your guess is 135, that
+          would be 1 strike and 1 ball since the number 1 is in the correct
+          position but 3 isn’t.
         </p>
       </div>
     </div>
     <a class="header_element" href="">About Us</a>
     <a class="header_element" href="">Rank</a>
-    <a href=""><h1 class="title">The Baseball Game</h1></a>
+    <a href=""><h1 class="title">Number Baseball</h1></a>
     <form>
       <div id="buttonNumberInput" class="input">Guess Your Number</div>
       <button
@@ -57,7 +51,7 @@
         type="button"
         onclick="resetInputNumber()"
       >
-        Reset
+        Clear
       </button>
     </form>
 
@@ -82,7 +76,7 @@
             <h4 class="card-header">Scoreboard</h4>
             <table>
               <tr class="ballLight">
-                <td class="scoreIdentifier">O</td>
+                <td class="scoreIdentifier">B</td>
                 <td><div class="bulb"></div></td>
                 <td><div class="bulb"></div></td>
                 <td><div class="bulb"></div></td>
@@ -104,6 +98,6 @@
       </tr>
     </table>
 
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

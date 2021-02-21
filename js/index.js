@@ -18,18 +18,20 @@ const randomNum = ranNumList()[Math.floor(Math.random() * ranNumList().length)];
 
 // Basic Algorthim for Game
 
-var ansString = randomNum.toString();
-// var guessString = guess.toString();
+let ansString = randomNum.toString();
 
+// string that shows number of strikes and balls
 var outcome;
+// integer to increase outcome array
 var outcomeNum = 0;
+// empty array used to store outcome.
 var resultArray = Array();
 
 // Take Input and get result. Add result to array
 function getResultAddToArray(ansString) {
-  var strike = 0;
-  var ball = 0;
-  var guessString = document.getElementById("buttonNumberInput").innerHTML;
+  let strike = 0;
+  let ball = 0;
+  let guessString = document.getElementById("buttonNumberInput").innerHTML;
 
   resetLight();
   for (var i = 0; i < ansString.length; i++) {
@@ -49,7 +51,7 @@ function getResultAddToArray(ansString) {
   }
   makeGreen(strike);
   makeRed(ball);
-  x = Array();
+  inputArray = Array();
 }
 
 // Change Light
@@ -83,55 +85,54 @@ function displayResultArray() {
 }
 
 // Detect button click
-var x = Array();
+
+// array storing input by buttons
+var inputArray = Array();
 for (var i = 0; i < document.querySelectorAll(".nums").length; i++) {
   document.querySelectorAll(".nums")[i].addEventListener("click", function () {
     var clickNum = this.innerHTML;
-    x.push(clickNum);
-    if (x.length > 3) {
-      x.shift();
+    inputArray.push(clickNum);
+    if (inputArray.length > 3) {
+      inputArray.shift();
     }
-    // console.log(x.slice(0, 3));
-    x = x.slice(0, 3);
-    document.getElementById("buttonNumberInput").innerHTML = x
+    inputArray = inputArray.slice(0, 3);
+    document.getElementById("buttonNumberInput").innerHTML = inputArray
       .join("")
       .toString();
   });
 }
 
+// input using keyboard ==> not functional yet
 document.addEventListener("keypress", function () {
   var clickNum = this.innerHTML;
-  x.push(clickNum);
-  if (x.length > 3) {
-    x.shift();
+  inputArray.push(clickNum);
+  if (inputArray.length > 3) {
+    inputArray.shift();
   }
-  // console.log(x.slice(0, 3));
-  x = x.slice(0, 3);
-  document.getElementById("buttonNumberInput").innerHTML = x
+  inputArray = inputArray.slice(0, 3);
+  document.getElementById("buttonNumberInput").innerHTML = inputArray
     .join("")
     .toString();
 });
 
 function resetInputNumber() {
-  var emptyArray = Array();
+  let emptyArray = Array();
   document.getElementById("buttonNumberInput").innerHTML = emptyArray;
-  x = Array();
+  inputArray = Array();
 }
 
-window.addEventListener("load",function(){
-	document.querySelector(".trigger_popup")
-	.addEventListener("click",function(){
-		document.querySelector('.hover_bkgr')
-		.style.display = 'block'
-	});
-	document.querySelector(".hover_bkgr")
-	.addEventListener("click",function(){
-		document.querySelector('.hover_bkgr')
-		.style.display = 'none'
-	});
-	document.querySelector(".popupCloseButton")
-	.addEventListener("click",function(){
-		document.querySelector('.hover_bkgr')
-		.style.display = 'none'
-	});
-})
+window.addEventListener("load", function () {
+  document
+    .querySelector(".trigger_popup")
+    .addEventListener("click", function () {
+      document.querySelector(".hover_bkgr").style.display = "block";
+    });
+  document.querySelector(".hover_bkgr").addEventListener("click", function () {
+    document.querySelector(".hover_bkgr").style.display = "none";
+  });
+  document
+    .querySelector(".popupCloseButton")
+    .addEventListener("click", function () {
+      document.querySelector(".hover_bkgr").style.display = "none";
+    });
+});
