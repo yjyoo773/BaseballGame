@@ -25,11 +25,13 @@ var outcome;
 var outcomeNum = 0;
 var resultArray = Array();
 
+// Take Input and get result. Add result to array
 function getResultAddToArray(ansString) {
   var strike = 0;
   var ball = 0;
   var guessString = document.getElementById("buttonNumberInput").innerHTML;
 
+  resetLight();
   for (var i = 0; i < ansString.length; i++) {
     if (ansString[i] == guessString[i]) {
       strike++;
@@ -41,13 +43,37 @@ function getResultAddToArray(ansString) {
   resultArray[outcomeNum] = outcome + " || " + guessString;
   outcomeNum++;
   document.getElementById("buttonNumberInput").innerHTML = "";
-  if (ansString === guessString){
-    if(alert('You Win!')){}
-    else    window.location.reload(); 
+  if (ansString === guessString) {
+    if (alert("You Win!")) {
+    } else window.location.reload();
   }
+  makeGreen(strike);
+  makeRed(ball);
   x = Array();
 }
 
+// Change Light
+function makeRed(numBall) {
+  for (var i = 0; i < numBall; i++) {
+    document.querySelectorAll(".ballLight .bulb")[i].style.backgroundColor =
+      "red";
+  }
+}
+
+function makeGreen(numStrike) {
+  for (var i = 0; i < numStrike; i++) {
+    document.querySelectorAll(".strikeLight .bulb")[i].style.backgroundColor =
+      "green";
+  }
+}
+
+function resetLight() {
+  var bulbsLength = document.querySelectorAll(".bulb").length;
+  for (var i = 0; i < bulbsLength; i++)
+    document.querySelectorAll(".bulb")[i].style.backgroundColor = "black";
+}
+
+// Display Array to result box
 function displayResultArray() {
   let e = "<hr/>";
   for (var y = 0; y < resultArray.length; y++) {
@@ -66,15 +92,27 @@ for (var i = 0; i < document.querySelectorAll(".nums").length; i++) {
       x.shift();
     }
     // console.log(x.slice(0, 3));
-    x = x.slice(0,3);
+    x = x.slice(0, 3);
     document.getElementById("buttonNumberInput").innerHTML = x
       .join("")
       .toString();
   });
 }
 
+document.addEventListener("keypress", function () {
+  var clickNum = this.innerHTML;
+  x.push(clickNum);
+  if (x.length > 3) {
+    x.shift();
+  }
+  // console.log(x.slice(0, 3));
+  x = x.slice(0, 3);
+  document.getElementById("buttonNumberInput").innerHTML = x
+    .join("")
+    .toString();
+});
 
-function resetInputNumber(){
+function resetInputNumber() {
   var emptyArray = Array();
   document.getElementById("buttonNumberInput").innerHTML = emptyArray;
   x = Array();
