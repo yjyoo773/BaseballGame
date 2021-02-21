@@ -4,56 +4,63 @@ body {
 
   color: #fff;
 }
-#bg{
+
+#bg {
   position: fixed;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   z-index: -10;
 }
-#bg img{
+
+#bg img {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom:0;
+  bottom: 0;
   margin: auto;
   min-width: 50%;
   min-height: 50%;
 }
-a{
-  color:#fff;
+
+a {
+  color: #fff;
 }
-a:link{
+
+a:link {
   text-decoration: none;
 }
 
 /* Header */
 
-.header_element{
+.header_element {
   margin: 3% 3% 0;
   font-weight: bold;
 
 }
+
 /* Popup Box */
-.hover_bkgr{
-  background:rgba(0,0,0,.4);
-  cursor:pointer;
-  display:none;
-  height:100%;
-  position:fixed;
-  text-align:center;
-  top:0;
-  width:100%;
-  z-index:10000;
+.hover_bkgr {
+  background: rgba(0, 0, 0, .4);
+  cursor: pointer;
+  display: none;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
 }
-.hover_bkgr .vertCenter{
-  display:inline-block;
-  height:100%;
-  vertical-align:middle;
+
+.hover_bkgr .vertCenter {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
-.hover_bkgr > div {
+
+.hover_bkgr>div {
   background-color: #111;
   box-shadow: 10px 10px 60px #555;
   display: inline-block;
@@ -66,6 +73,7 @@ a:link{
   border-radius: 8px;
   padding: 15px 5%;
 }
+
 .popupCloseButton {
   background-color: #111;
   border: 3px solid #999;
@@ -83,12 +91,18 @@ a:link{
   height: 30px;
   text-align: center;
 }
+
 .popupCloseButton:hover {
   background-color: #ccc;
 }
+
 .trigger_popup {
   cursor: pointer;
   display: inline-block;
+}
+
+.howToPlayText {
+  text-align: left;
 }
 
 /* Title */
@@ -104,12 +118,14 @@ a:link{
   height: 40px;
   font-size: 1.3rem;
 }
+
 .inputNum {
   width: 250px;
 }
 
 #buttonNumberInput {
   background-color: blue;
+  font-size: 1.5rem;
   width: 250px;
   display: inline-block;
 }
@@ -130,9 +146,11 @@ a:link{
   margin: 10px;
   background-color: #fff;
 }
+
 .nums:hover {
   background-color: #e7f2f8;
 }
+
 .nums:active {
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
@@ -142,6 +160,7 @@ a:link{
 table {
   margin: auto;
 }
+
 .card {
   display: inline-block;
   width: 300px;
@@ -150,23 +169,28 @@ table {
   border-radius: 5%;
   position: relative;
 }
+
 .card-header {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 10px;
 }
+
 .guess {
   background-color: #cdcdcd;
   color: #da0463;
 }
+
 .scoreboard {
   background-color: #333;
   height: 200px;
 }
-.scoreIdentifier{
+
+.scoreIdentifier {
   font-size: 2rem;
   font-weight: 600;
 }
+
 .bulb {
   height: 50px;
   width: 50px;
@@ -181,4 +205,3 @@ table {
   width: 100%;
   height: 2.5rem;
 }
-
