@@ -15,17 +15,6 @@
   <body>
     <h1 class="title">The Baseball Game</h1>
     <form>
-      <!-- <input
-        id="userInputNum"
-        class="inputNum input"
-        name="guessString"
-        type="text"
-        pattern="\d*"
-        required
-        minlength="3"
-        maxlength="3"
-        placeholder="Guess Your Number"
-      /> -->
       <div id="buttonNumberInput" class="input">Guess Your Number</div>
       <button
         class="input"
@@ -35,9 +24,14 @@
       >
         OK
       </button>
-      <button id="resetButton" class="input" type="button" onclick="resetInputNumber()">Reset</button>
-      <!-- OK
-    </input> -->
+      <button
+        id="resetButton"
+        class="input"
+        type="button"
+        onclick="resetInputNumber()"
+      >
+        Reset
+      </button>
     </form>
 
     <div class="firstRow">
@@ -59,6 +53,17 @@
         <td>
           <div class="scoreboard card">
             <h4 class="card-header">Scoreboard</h4>
+            <table>
+              <tr class="ballLight">
+                <td><div class="bulb"></div></td>
+                <td><div class="bulb"></div></td>
+                <td><div class="bulb"></div></td>
+              </tr>
+              <tr class="strikeLight">
+                <td><div class="bulb"></div></td>
+                <td><div class="bulb"></div></td>
+              </tr>
+            </table>
           </div>
         </td>
         <td>
