@@ -159,18 +159,6 @@ function switchInputNameToNum() {
   }
 }
 
-// LOCAL STORAGE
-
-// function GameScore(name,guessCount){
-//   this.name = name;
-//   this.guessCount = guessCount;
-//   GameScore.records.push(this);
-//   localStorage.gameScoreArray = JSON.stringify(GameScore.records);
-// }
-
-
-
-
 // HighScores
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const ranks = JSON.parse(localStorage.getItem("ranking")) || [];
