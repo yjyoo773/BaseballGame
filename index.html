@@ -39,8 +39,18 @@
     <a class="header_element" href="">About Us</a>
     <a class="header_element" href="">Rank</a>
     <a href=""><h1 class="title">Number Baseball</h1></a>
-    <form>
-      <div id="buttonNumberInput" class="input">Guess Your Number</div>
+    <form id="nameInputForm">
+      Enter Your Name:  <input id="nameInput" class="input inputBox" type="text"></input>
+      <button 
+      class="input" 
+      type="button" 
+      onclick="switchInputNameToNum();">
+      Submit
+    </button>
+    </form>
+    <form id="numberInputForm">
+      <p id="numInputText"></p>
+      <div id="buttonNumberInput" class="input inputBox"></div>
       <button
         class="input"
         id="numInputButton"
