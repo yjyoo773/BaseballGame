@@ -1,3 +1,15 @@
+var outcome; // string that shows number of strikes and balls
+var outcomeNum = 0; // integer to increase outcome array
+var resultArray = Array(); // empty array used to store outcome.
+
+const randomNum = ranNumList()[Math.floor(Math.random() * ranNumList().length)]; // Set guesing number
+const btnNumInput = document.getElementById("buttonNumberInput");
+const results = document.getElementById("results");
+const nameInputForm = document.getElementById("nameInputForm");
+const nameInputText = document.getElementById("numInputText");
+const numInputFrom = document.getElementById("numberInputForm");
+const nameInput = document.getElementById("nameInput");
+
 // Create List of 3 digit distinct number
 function ranNumList() {
   var ranList = [];
@@ -13,25 +25,11 @@ function ranNumList() {
   return ranList;
 }
 
-// Set guesing number
-const randomNum = ranNumList()[Math.floor(Math.random() * ranNumList().length)];
-
-// Basic Algorthim for Game
-
-let ansString = randomNum.toString();
-
-// string that shows number of strikes and balls
-var outcome;
-// integer to increase outcome array
-var outcomeNum = 0;
-// empty array used to store outcome.
-var resultArray = Array();
-
 // Take Input and get result. Add result to array
 function getResultAddToArray(ansString) {
   let strike = 0;
   let ball = 0;
-  let guessString = document.getElementById("buttonNumberInput").innerHTML;
+  let guessString = btnNumInput.innerHTML;
 
   resetLight();
   for (var i = 0; i < ansString.length; i++) {
@@ -42,35 +40,35 @@ function getResultAddToArray(ansString) {
     }
   }
   outcome = "S: " + strike + " B: " + ball;
-  if(outcome && guessString){
+  if (outcome && guessString.length == 3) {
     resultArray[outcomeNum] = outcome + " || " + guessString;
+
     outcomeNum++;
   }
-  document.getElementById("buttonNumberInput").innerHTML = "";
+  btnNumInput.innerHTML = "";
   if (ansString === guessString) {
-    if (alert("You Win!")) {
-    } else window.location.reload();
+    saveRank();
+    alert("You Win!");
+    window.location.reload();
   }
-  makeGreen(strike);
-  makeRed(ball);
+
+  changeLight(ball, strike);
   inputArray = Array();
 }
 
-// Change Light
-function makeRed(numBall) {
+// Change scoreboard light
+function changeLight(numBall, numStrike) {
+  for (var i = 0; i < numStrike; i++) {
+    document.querySelectorAll(".strikeLight .bulb")[i].style.backgroundColor =
+      "green";
+  }
   for (var i = 0; i < numBall; i++) {
     document.querySelectorAll(".ballLight .bulb")[i].style.backgroundColor =
       "red";
   }
 }
 
-function makeGreen(numStrike) {
-  for (var i = 0; i < numStrike; i++) {
-    document.querySelectorAll(".strikeLight .bulb")[i].style.backgroundColor =
-      "green";
-  }
-}
-
+// Turn light back to black
 function resetLight() {
   var bulbsLength = document.querySelectorAll(".bulb").length;
   for (var i = 0; i < bulbsLength; i++)
@@ -83,10 +81,9 @@ function displayResultArray() {
   for (var y = 0; y < resultArray.length; y++) {
     e += `${resultArray[y]}<br/>`;
   }
-  document.getElementById("results").innerHTML = e;
+  results.innerHTML = e;
+  return resultArray;
 }
-
-// Detect button click
 
 // array storing input by buttons
 var inputArray = Array();
@@ -98,31 +95,30 @@ for (var i = 0; i < document.querySelectorAll(".nums").length; i++) {
       inputArray.shift();
     }
     inputArray = inputArray.slice(0, 3);
-    document.getElementById("buttonNumberInput").innerHTML = inputArray
-      .join("")
-      .toString();
+    btnNumInput.innerHTML = inputArray.join("").toString();
   });
 }
 
-// input using keyboard ==> not functional yet
-document.addEventListener("keypress", function () {
-  var clickNum = this.innerHTML;
-  inputArray.push(clickNum);
-  if (inputArray.length > 3) {
-    inputArray.shift();
-  }
-  inputArray = inputArray.slice(0, 3);
-  document.getElementById("buttonNumberInput").innerHTML = inputArray
-    .join("")
-    .toString();
-});
+// // input using keyboard ==> not functional yet
+// document.addEventListener("keypress", function () {
+//   var clickNum = this.innerHTML;
+//   inputArray.push(clickNum);
+//   if (inputArray.length > 3) {
+//     inputArray.shift();
+//   }
+//   inputArray = inputArray.slice(0, 3);
+//   document.getElementById("buttonNumberInput").innerHTML = inputArray
+//     .join("")
+//     .toString();
+// });
 
 function resetInputNumber() {
   let emptyArray = Array();
-  document.getElementById("buttonNumberInput").innerHTML = emptyArray;
+  btnNumInput.innerHTML = emptyArray;
   inputArray = Array();
 }
 
+// Create pop-up for game rules
 window.addEventListener("load", function () {
   document
     .querySelector(".trigger_popup")
@@ -139,12 +135,70 @@ window.addEventListener("load", function () {
     });
 });
 
-// After submitting name, show input number 
-function switchInputNameToNum(){
-  let name = document.getElementById("nameInput").value;
-  if(name){
-  document.getElementById("nameInputForm").style.display = 'none';
-  document.getElementById("numInputText").innerHTML = name + " guess your number";
-  document.getElementById("numberInputForm").style.display = 'block';
+// After submitting name, show input number
+function switchInputNameToNum() {
+  let name = nameInput.value;
+  if (name) {
+    // document.getElementById("nameInputForm").style.display = 'none';
+    nameInputForm.style.display = "none";
+    nameInputText.innerHTML = name + " guess your number";
+    numInputFrom.style.display = "block";
+  }
 }
+
+// LOCAL STORAGE
+
+// function GameScore(name,guessCount){
+//   this.name = name;
+//   this.guessCount = guessCount;
+//   GameScore.records.push(this);
+//   localStorage.gameScoreArray = JSON.stringify(GameScore.records);
+// }
+
+var defaultScore = [
+  { name: "Dwight", guesses: 3 },
+  { name: "Jim", guesses: 6 },
+  { name: "Michael", guesses: 5 },
+  { name: "Toby", guesses: 14 },
+];
+
+// function loadLocalStorage(){
+//   if(!localStorage.getItem('gameScoreArray')){
+//     for(var i in defaultScore){
+//       new GameScore(defaultScore[i].name,defaultScore[i].guessCount);
+//     }
+//   }
+//   else{
+//     GameScore.records = [];
+//     var lsScore = JSON.parse(localStorage.gameScoreArray);
+//     for (var i in lsScore){
+//       new GameScore(lsScore[i].name,lsScore[i].guessCount);
+//     }
+//   }
+// }
+
+// Reset 
+function reset(){
+
+}
+
+
+
+
+// HighScores
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+const ranks = JSON.parse(localStorage.getItem("ranking")) || [];
+
+function saveRank() {
+  const ranking = {
+    username: nameInput.value,
+    guessCount: resultArray.length,
+  };
+  // console.log(ranking);
+  ranks.push(ranking);
+  ranks.sort(function (a, b) {
+    return a.guessCount - b.guessCount;
+  });
+  ranks.splice(10);
+  localStorage.ranking = JSON.stringify(ranks);
 }
