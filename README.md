@@ -48,3 +48,7 @@ Version 1.0.8
 Version 1.1.0
 - Create Ranking page
 - Using local storage, now displays rankings of player
+
+Version 1.1.1
+- Redesign ranking table
+- Remove scoreboard to make webpage mobile friendly
