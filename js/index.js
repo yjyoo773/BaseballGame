@@ -10,6 +10,9 @@ const nameInputText = document.getElementById("numInputText");
 const numInputFrom = document.getElementById("numberInputForm");
 const nameInput = document.getElementById("nameInput");
 
+
+loadRank(); // create default ranks
+
 // Create List of 3 digit distinct number
 function ranNumList() {
   var ranList = [];
@@ -156,33 +159,17 @@ function switchInputNameToNum() {
 // }
 
 var defaultScore = [
-  { name: "Dwight", guesses: 3 },
+  { name: "Dwight", guesses: 5 },
   { name: "Jim", guesses: 6 },
   { name: "Michael", guesses: 5 },
   { name: "Toby", guesses: 14 },
+  { name: "Pam", guesses: 8 },
+  { name: "Ryan", guesses: 11 },
+  { name: "Kevin", guesses: 18 },
+  { name: "Angela", guesses: 7 },
+  { name: "Phylis", guesses: 9 },
+  { name: "Andy", guesses: 15 },
 ];
-
-// function loadLocalStorage(){
-//   if(!localStorage.getItem('gameScoreArray')){
-//     for(var i in defaultScore){
-//       new GameScore(defaultScore[i].name,defaultScore[i].guessCount);
-//     }
-//   }
-//   else{
-//     GameScore.records = [];
-//     var lsScore = JSON.parse(localStorage.gameScoreArray);
-//     for (var i in lsScore){
-//       new GameScore(lsScore[i].name,lsScore[i].guessCount);
-//     }
-//   }
-// }
-
-// Reset 
-function reset(){
-
-}
-
-
 
 
 // HighScores
@@ -190,15 +177,31 @@ const mostRecentScore = localStorage.getItem("mostRecentScore");
 const ranks = JSON.parse(localStorage.getItem("ranking")) || [];
 
 function saveRank() {
-  const ranking = {
+  const score = {
     username: nameInput.value,
     guessCount: resultArray.length,
   };
   // console.log(ranking);
-  ranks.push(ranking);
+  ranks.push(score);
   ranks.sort(function (a, b) {
     return a.guessCount - b.guessCount;
   });
   ranks.splice(10);
   localStorage.ranking = JSON.stringify(ranks);
+}
+
+function loadRank() {
+  if (!localStorage.getItem("ranking")) {
+    for (var i = 0; i < defaultScore.length; i++) {
+      const score = {
+        username: defaultScore[i].name,
+        guessCount: defaultScore[i].guesses,
+      };
+      ranks.push(score);
+      ranks.sort(function (a, b) {
+        return a.guessCount - b.guessCount;
+      });
+    }
+    localStorage.ranking = JSON.stringify(ranks);
+  }
 }

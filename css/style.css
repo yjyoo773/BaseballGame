@@ -125,7 +125,7 @@ a:link {
 }
 
 .inputBox {
-  background-color: blue;
+  background-color: rgba(51, 51, 170, 0.2);
   color: #fff;
   font-size: 1.5rem;
   width: 250px;
@@ -133,11 +133,12 @@ a:link {
 }
 
 
-#numberInputForm{
+#numberInputForm {
   display: none;
 }
+
 #buttonNumberInput {
-  background-color: blue;
+  background-color: rgba(51, 51, 170, 0.2);
   font-size: 1.5rem;
   width: 150px;
   display: inline-block;
