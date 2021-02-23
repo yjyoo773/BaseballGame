@@ -5,6 +5,11 @@ body {
   color: #fff;
 }
 
+form {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 #bg {
   position: fixed;
   top: -50%;
@@ -119,14 +124,22 @@ a:link {
   font-size: 1.3rem;
 }
 
-.inputNum {
+.inputBox {
+  background-color: blue;
+  color: #fff;
+  font-size: 1.5rem;
   width: 250px;
+  display: inline-block;
 }
 
+
+#numberInputForm{
+  display: none;
+}
 #buttonNumberInput {
   background-color: blue;
   font-size: 1.5rem;
-  width: 250px;
+  width: 150px;
   display: inline-block;
 }
 

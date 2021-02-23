@@ -136,3 +136,11 @@ window.addEventListener("load", function () {
       document.querySelector(".hover_bkgr").style.display = "none";
     });
 });
+
+// After submitting name, show input number 
+function switchInputNameToNum(){
+  let name = document.getElementById("nameInput").value;
+  document.getElementById("nameInputForm").style.display = 'none';
+  document.getElementById("numInputText").innerHTML = name + " guess your number";
+  document.getElementById("numberInputForm").style.display = 'block';
+}
