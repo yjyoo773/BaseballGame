@@ -39,3 +39,8 @@ Version 1.0.6
 Version 1.0.7
 - Create element to input player name
 - Design such that when inputting name, hides the element and shows number input elements
+
+Version 1.0.8
+- Prevent from empty inputs to be entered for player name and number guessed
+- Create local storage
+- When player wins game, name and number of guesses is stored in local storage in sorted order
