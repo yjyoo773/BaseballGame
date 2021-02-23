@@ -35,3 +35,7 @@ Version 1.0.5
 Version 1.0.6
 - Utilize pop up for how to play and add description for how to play
 - Move footer to header for better visualization
+
+Version 1.0.7
+- Create element to input player name
+- Design such that when inputting name, hides the element and shows number input elements
