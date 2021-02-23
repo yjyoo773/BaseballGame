@@ -44,3 +44,7 @@ Version 1.0.8
 - Prevent from empty inputs to be entered for player name and number guessed
 - Create local storage
 - When player wins game, name and number of guesses is stored in local storage in sorted order
+
+Version 1.1.0
+- Create Ranking page
+- Using local storage, now displays rankings of player
