@@ -42,8 +42,10 @@ function getResultAddToArray(ansString) {
     }
   }
   outcome = "S: " + strike + " B: " + ball;
-  resultArray[outcomeNum] = outcome + " || " + guessString;
-  outcomeNum++;
+  if(outcome && guessString){
+    resultArray[outcomeNum] = outcome + " || " + guessString;
+    outcomeNum++;
+  }
   document.getElementById("buttonNumberInput").innerHTML = "";
   if (ansString === guessString) {
     if (alert("You Win!")) {
@@ -140,7 +142,9 @@ window.addEventListener("load", function () {
 // After submitting name, show input number 
 function switchInputNameToNum(){
   let name = document.getElementById("nameInput").value;
+  if(name){
   document.getElementById("nameInputForm").style.display = 'none';
   document.getElementById("numInputText").innerHTML = name + " guess your number";
   document.getElementById("numberInputForm").style.display = 'block';
+}
 }
