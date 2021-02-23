@@ -52,3 +52,7 @@ Version 1.1.0
 Version 1.1.1
 - Redesign ranking table
 - Remove scoreboard to make webpage mobile friendly
+
+Version 1.1.2
+- Change minor formatting overall to improve UI
+- Create about-me page and format 
