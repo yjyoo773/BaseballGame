@@ -143,9 +143,11 @@ a:link {
   width: 150px;
   display: inline-block;
 }
-.numInputBtns{
+
+.numInputBtns {
   line-height: 3;
 }
+
 /* Number Buttons */
 .nums {
   outline: none;
@@ -223,20 +225,8 @@ table {
 }
 
 @media screen and (max-width: 600px) {
-  /* table thead {
+
+  .scoreboard {
     display: none;
-  }
-  table td {
-    display: flex;
-  }
-  
-  table td::before {
-    content: attr(label);
-    font-weight: bold;
-    width: 120px;
-    min-width: 120px;
-  } */
-  .scoreboard{
-    display:none;
   }
 }

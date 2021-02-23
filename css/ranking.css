@@ -1,29 +1,26 @@
-/* #rankingList{
-    list-style-type: none;
-} */
-
-table{
+table {
     font-size: 2rem;
-    /* border: 2px solid; */
     border-collapse: collapse;
     background: hsla(0, 0%, 0%, 0.6);
     border-radius: 1rem;
-    /* margin-top: 6%; */
 }
 
-tr{
+tr {
     border-bottom: 1px solid;
 }
 
-tr:last-child{
+tr:last-child {
     border-bottom: none;
 }
-thead{
+
+thead {
     border-bottom: 1px solid;
 }
-td{
+
+td {
     border-right: 1px solid;
 }
-td:last-child{
+
+td:last-child {
     border-right: none;
 }
