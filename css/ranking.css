@@ -3,7 +3,7 @@ table {
     border-collapse: collapse;
     background: hsla(0, 0%, 0%, 0.6);
     border-radius: 1rem;
-    width: 35%;
+    width: 510px;
 }
 
 tr {
@@ -24,4 +24,10 @@ td {
 
 td:last-child {
     border-right: none;
+}
+
+@media screen and (max-width: 600px) {
+    table{
+        width: 90%;
+    }
 }
