@@ -6,8 +6,8 @@ const randomNum = ranNumList()[Math.floor(Math.random() * ranNumList().length)];
 const btnNumInput = document.getElementById("buttonNumberInput");
 const results = document.getElementById("results");
 const nameInputForm = document.getElementById("nameInputForm");
-const nameInputText = document.getElementById("numInputText");
-const numInputFrom = document.getElementById("numberInputForm");
+const numInputText = document.getElementById("numInputText");
+const numInputForm = document.getElementById("numberInputForm");
 const nameInput = document.getElementById("nameInput");
 
 var defaultScore = [
@@ -152,10 +152,10 @@ window.addEventListener("load", function () {
 function switchInputNameToNum() {
   let name = nameInput.value;
   if (name) {
-    // document.getElementById("nameInputForm").style.display = 'none';
     nameInputForm.style.display = "none";
-    nameInputText.innerHTML = name + " guess your number";
-    numInputFrom.style.display = "block";
+    resetInputNumber();
+    numInputText.innerHTML = name + " Guess Your Number";
+    numInputForm.style.display = "block";
   }
 }
 

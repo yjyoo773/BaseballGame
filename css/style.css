@@ -1,7 +1,7 @@
 body {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-
+  background-color: black;
   color: #fff;
 }
 
@@ -117,13 +117,18 @@ a:link {
   font-size: 4rem;
   padding: 0% 15% 1%;
   display: inline-block;
+  margin-bottom: 1%;
 }
 
 /* Input */
 .input {
-  margin: auto;
+  margin-left: 10px;
   height: 40px;
   font-size: 1.3rem;
+  border-radius: 15px;
+  background-color: rgba(46, 49, 49, 0.5);
+  color: #fff;
+  width: 81px;
 }
 
 .inputBox {
@@ -134,6 +139,13 @@ a:link {
   display: inline-block;
 }
 
+#nameInput{
+  border-radius: 15px;
+}
+
+#numInputText{
+  font-size: 1.8rem;
+}
 
 #numberInputForm {
   display: none;
@@ -141,8 +153,13 @@ a:link {
 
 #buttonNumberInput {
   background-color: rgba(51, 51, 170, 0.2);
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.6rem;
   width: 150px;
+  height: 60px;
   display: inline-block;
 }
 

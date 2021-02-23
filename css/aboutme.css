@@ -5,7 +5,7 @@ h2{
 
 .profile{
     display: inline-block;
-    background-color: rgba(46, 49, 49, 0.8);
+    background-color: rgba(46, 49, 49, 0.9);
     margin: 2%;
     padding: 15px 50px;
     width: 510px;
@@ -14,7 +14,7 @@ h2{
 
 .profile_pic {
     width: 150px;
-    height: 150px;
+    height: 130px;
     border-radius: 100%;
     float: left;
     margin: 3% 2%;
@@ -23,7 +23,8 @@ h2{
   .profileText{
     display: block;
     clear: both;
-    text-align: left;
+    text-align: justify;
+    line-height: 150%;
   }
 
   .icon-logo{
