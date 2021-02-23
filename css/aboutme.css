@@ -1,0 +1,44 @@
+h2{
+    font-size: 2.5rem;
+}
+
+
+.profile{
+    display: inline-block;
+    background-color: rgba(46, 49, 49, 0.8);
+    margin: 2%;
+    padding: 15px 3%;
+    width: 510px;
+    border-radius: 15px;
+}
+
+.profile_pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    float: left;
+    margin: 3% 2%;
+  }
+
+  .profileText{
+    display: block;
+    clear: both;
+    text-align: left;
+  }
+
+
+  @media screen and (max-width: 600px) {
+
+
+    .profile{
+        width: 90%;
+    }
+    .profile_pic{
+        float: none;
+        margin: 2% 2% 0;
+    }
+    .yourName{
+        margin: 15px 0;
+    }
+
+  }
