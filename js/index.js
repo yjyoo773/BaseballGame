@@ -11,7 +11,6 @@ const numInputFrom = document.getElementById("numberInputForm");
 const nameInput = document.getElementById("nameInput");
 
 
-loadRank(); // create default ranks
 
 // Create List of 3 digit distinct number
 function ranNumList() {
@@ -205,3 +204,5 @@ function loadRank() {
     localStorage.ranking = JSON.stringify(ranks);
   }
 }
+
+loadRank(); // create default ranks
