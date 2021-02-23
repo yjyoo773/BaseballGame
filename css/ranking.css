@@ -3,6 +3,7 @@ table {
     border-collapse: collapse;
     background: hsla(0, 0%, 0%, 0.6);
     border-radius: 1rem;
+    width: 35%;
 }
 
 tr {
