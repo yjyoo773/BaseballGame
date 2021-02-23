@@ -73,7 +73,7 @@ function getResultAddToArray(ansString) {
 function changeLight(numBall, numStrike) {
   for (var i = 0; i < numStrike; i++) {
     document.querySelectorAll(".strikeLight .bulb")[i].style.backgroundColor =
-      "green";
+      "#39FF14";
   }
   for (var i = 0; i < numBall; i++) {
     document.querySelectorAll(".ballLight .bulb")[i].style.backgroundColor =

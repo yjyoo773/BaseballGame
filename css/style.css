@@ -43,6 +43,7 @@ a:link {
 .header_element {
   margin: 3% 3% 0;
   font-weight: bold;
+  font-size: 1.2rem;
 
 }
 
@@ -115,6 +116,7 @@ a:link {
   font-family: "Playball", cursive;
   font-size: 4rem;
   padding: 0% 15% 1%;
+  display: inline-block;
 }
 
 /* Input */
@@ -195,12 +197,14 @@ table {
 }
 
 .guess {
-  background-color: #cdcdcd;
+  /* background-color: #cdcdcd; */
+  background-color: rgba(189, 195, 199, 0.8);
   color: #da0463;
 }
 
 .scoreboard {
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: rgba(46, 49, 49, 0.9);
   height: 200px;
 }
 
