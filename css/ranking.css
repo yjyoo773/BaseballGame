@@ -27,7 +27,7 @@ td:last-child {
 }
 
 @media screen and (max-width: 600px) {
-    table{
+    table {
         width: 90%;
     }
 }

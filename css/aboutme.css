@@ -1,9 +1,9 @@
-h2{
+h2 {
     font-size: 2.5rem;
 }
 
 
-.profile{
+.profile {
     display: inline-block;
     background-color: rgba(46, 49, 49, 0.9);
     margin: 2%;
@@ -13,36 +13,38 @@ h2{
 }
 
 .profile_pic {
-    width: 150px;
-    height: 130px;
-    border-radius: 100%;
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
     float: left;
     margin: 3% 2%;
-  }
+}
 
-  .profileText{
+.profileText {
     display: block;
     clear: both;
     text-align: justify;
-    line-height: 150%;
-  }
+    line-height: 180%;
+}
 
-  .icon-logo{
-      margin: 0 2%;
-  }
+.icon-logo {
+    margin: 0 2%;
+}
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 
 
-    .profile{
+    .profile {
         width: 90%;
     }
-    .profile_pic{
+
+    .profile_pic {
         float: none;
         margin: 2% 2% 0;
     }
-    .yourName{
+
+    .yourName {
         margin: 15px 0;
     }
 
-  }
+}

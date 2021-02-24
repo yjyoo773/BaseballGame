@@ -139,11 +139,11 @@ a:link {
   display: inline-block;
 }
 
-#nameInput{
+#nameInput {
   border-radius: 15px;
 }
 
-#numInputText{
+#numInputText {
   font-size: 1.8rem;
 }
 
@@ -214,13 +214,26 @@ table {
 }
 
 .guess {
-  /* background-color: #cdcdcd; */
   background-color: rgba(189, 195, 199, 0.8);
   color: #da0463;
 }
 
+#results{
+  border-spacing: 30px 0;
+}
+td#results{
+  padding: 10px 0;
+  width: 120px;
+  border-right: 1px solid;
+
+}
+
+
+td:last-child {
+  border-right: none;
+}
+
 .scoreboard {
-  /* background-color: #333; */
   background-color: rgba(46, 49, 49, 0.9);
   height: 200px;
 }
