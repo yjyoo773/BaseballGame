@@ -4,7 +4,7 @@ Number guessing game with a twist using basic baseball terms.
 ## About the Game
 The page is a game where the user guesses a random three digit number that has distinct digits. The rules are quite simple. If the player matches the number and order of a digit, it is strike. If the player matches a number but is not in the correct place, it is a ball. Using these hints the player should be able to match the number.  
 It is designed to count the number of guesses it takes and stores the value and placed in the ranking which stores the top 10 players.  
-By creating buttons to use to input numbers and not typing in the numbers the page more accessible on mobile as much as computers. 
+
 ## Version Updates
 Version 1.0.0  
 Create basic frame using html and css. 
