@@ -1,5 +1,6 @@
 # BaseballGame
-Number guessing game with a twist using basic baseball terms.
+Number guessing game with a twist using basic baseball terms.  
+https://yjyoo773.github.io/BaseballGame/
 
 ## About the Game
 The page is a game where the user guesses a random three digit number that has distinct digits. The rules are quite simple. If the player matches the number and order of a digit, it is strike. If the player matches a number but is not in the correct place, it is a ball. Using these hints the player should be able to match the number.  
