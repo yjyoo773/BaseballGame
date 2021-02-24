@@ -218,6 +218,9 @@ table {
   color: #da0463;
 }
 
+.card.guess{
+  overflow: auto;
+}
 #results{
   border-spacing: 30px 0;
 }
