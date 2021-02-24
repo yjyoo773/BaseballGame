@@ -59,7 +59,8 @@
         class="input"
         id="numInputButton"
         type="button"
-        onclick="getResultAddToArray(randomNum);displayResultArray();"
+        onclick="getResultAddToArray(randomNum);resultTable();"
+
       >
         OK
       </button>
@@ -111,7 +112,7 @@
         <td>
           <div class="guess card">
             <h4 class="card-header">Guess History</h4>
-            <div id="results"></div>
+            <table id="results"></table>
           </div>
         </td>
       </tr>

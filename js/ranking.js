@@ -21,6 +21,7 @@ function updateTableHTML(myArray) {
       return y.guessCount;
     })[i];
     newRow.appendChild(newCell2);
+
   }
 }
 
@@ -31,7 +32,7 @@ function createHeader() {
   var headCell1 = headerRow.insertCell(0);
   var headCell2 = headerRow.insertCell(1);
   headCell1.innerHTML = "Name";
-  headCell2.innerHTML = "Number of Guesses";
+  headCell2.innerHTML = "Num of Guesses";
 }
 
 updateTableHTML(ranking);

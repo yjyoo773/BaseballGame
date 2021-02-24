@@ -112,19 +112,6 @@ for (var i = 0; i < document.querySelectorAll(".nums").length; i++) {
   });
 }
 
-// // input using keyboard ==> not functional yet
-// document.addEventListener("keypress", function () {
-//   var clickNum = this.innerHTML;
-//   inputArray.push(clickNum);
-//   if (inputArray.length > 3) {
-//     inputArray.shift();
-//   }
-//   inputArray = inputArray.slice(0, 3);
-//   document.getElementById("buttonNumberInput").innerHTML = inputArray
-//     .join("")
-//     .toString();
-// });
-
 function resetInputNumber() {
   let emptyArray = Array();
   btnNumInput.innerHTML = emptyArray;
@@ -168,7 +155,6 @@ function saveRank() {
     username: nameInput.value,
     guessCount: resultArray.length,
   };
-  // console.log(ranking);
   ranks.push(score);
   ranks.sort(function (a, b) {
     return a.guessCount - b.guessCount;
@@ -192,5 +178,49 @@ function loadRank() {
     localStorage.ranking = JSON.stringify(ranks);
   }
 }
+
+function resultTable() {
+  var tableBody = document.getElementById("results"),
+    newRow,
+    newCell1,
+    newCell2;
+
+  tableBody.innerHTML = "";
+
+  for (var i = 0; i < resultArray.length; i++) {
+    newRow = document.createElement("tr");
+    tableBody.appendChild(newRow);
+
+    var cols = resultArray[i].split("||");
+
+
+
+    newCell1 = document.createElement("td");
+    newCell1.textContent = cols[0]
+    newRow.appendChild(newCell1);
+    newCell2 = document.createElement("td");
+    newCell2.textContent = cols[1]
+    newRow.appendChild(newCell2);
+
+  }
+  resultHeader();
+
+}
+
+
+
+
+
+function resultHeader() {
+  var tableBody = document.getElementById("results");
+  var header = tableBody.createTHead();
+  var headerRow = header.insertRow(0);
+  var headCell1 = headerRow.insertCell(0);
+  var headCell2 = headerRow.insertCell(1);
+  headCell1.innerHTML = "Result";
+  headCell2.innerHTML = "Your Number";
+}
+
+
 
 loadRank(); // create default ranks
