@@ -219,15 +219,18 @@ table {
 }
 
 #results{
-  border-collapse: separate;
   border-spacing: 30px 0;
 }
 td#results{
   padding: 10px 0;
   width: 120px;
+  border-right: 1px solid;
+
 }
-thead{
-  border-bottom: 1px solid;
+
+
+td:last-child {
+  border-right: none;
 }
 
 .scoreboard {

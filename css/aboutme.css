@@ -13,9 +13,9 @@ h2 {
 }
 
 .profile_pic {
-    width: 150px;
-    height: 130px;
-    border-radius: 100%;
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
     float: left;
     margin: 3% 2%;
 }
@@ -24,7 +24,7 @@ h2 {
     display: block;
     clear: both;
     text-align: justify;
-    line-height: 150%;
+    line-height: 180%;
 }
 
 .icon-logo {

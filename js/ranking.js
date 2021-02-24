@@ -3,6 +3,7 @@ let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
 function updateTableHTML(myArray) {
   var tableBody = document.getElementById("tableRanking"),
     newRow,
+    newCell0,
     newCell1,
     newCell2;
 
@@ -11,6 +12,9 @@ function updateTableHTML(myArray) {
   for (var i = 0; i < myArray.length; i++) {
     newRow = document.createElement("tr");
     tableBody.appendChild(newRow);
+    newCell0 = document.createElement("td");
+    newCell0.textContent = i + 1;
+    newRow.appendChild(newCell0);
     newCell1 = document.createElement("td");
     newCell1.textContent = myArray.map(function (x) {
       return x.username;
@@ -29,8 +33,10 @@ function createHeader() {
   var tableBody = document.getElementById("tableRanking");
   var header = tableBody.createTHead();
   var headerRow = header.insertRow(0);
-  var headCell1 = headerRow.insertCell(0);
-  var headCell2 = headerRow.insertCell(1);
+  var headCell0  = headerRow.insertCell(0)
+  var headCell1 = headerRow.insertCell(1);
+  var headCell2 = headerRow.insertCell(2);
+  headCell0.innerHTML = "Rank";
   headCell1.innerHTML = "Name";
   headCell2.innerHTML = "Num of Guesses";
 }
