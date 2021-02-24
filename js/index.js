@@ -184,7 +184,6 @@ function resultTable() {
     newRow,
     newCell1,
     newCell2;
-
   tableBody.innerHTML = "";
 
   for (var i = 0; i < resultArray.length; i++) {
@@ -192,8 +191,6 @@ function resultTable() {
     tableBody.appendChild(newRow);
 
     var cols = resultArray[i].split("||");
-
-
 
     newCell1 = document.createElement("td");
     newCell1.textContent = cols[0]
@@ -204,12 +201,7 @@ function resultTable() {
 
   }
   resultHeader();
-
 }
-
-
-
-
 
 function resultHeader() {
   var tableBody = document.getElementById("results");
@@ -220,7 +212,5 @@ function resultHeader() {
   headCell1.innerHTML = "Result";
   headCell2.innerHTML = "Your Number";
 }
-
-
 
 loadRank(); // create default ranks
