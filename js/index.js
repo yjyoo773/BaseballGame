@@ -10,6 +10,7 @@ const numInputText = document.getElementById("numInputText");
 const numInputForm = document.getElementById("numberInputForm");
 const nameInput = document.getElementById("nameInput");
 
+// Default ranks to be used
 var defaultScore = [
   { name: "Dwight", guesses: 5 },
   { name: "Jim", guesses: 6 },
@@ -98,7 +99,7 @@ function displayResultArray() {
   return resultArray;
 }
 
-// array storing input by buttons
+// array storing input by numbered buttons
 var inputArray = Array();
 for (var i = 0; i < document.querySelectorAll(".nums").length; i++) {
   document.querySelectorAll(".nums")[i].addEventListener("click", function () {
@@ -150,6 +151,8 @@ function switchInputNameToNum() {
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const ranks = JSON.parse(localStorage.getItem("ranking")) || [];
 
+//  Get the username and number of guesses and stores and adds to array storing 
+// scores based on number of guesses. Then stores to local storage
 function saveRank() {
   const score = {
     username: nameInput.value,
@@ -163,6 +166,7 @@ function saveRank() {
   localStorage.ranking = JSON.stringify(ranks);
 }
 
+// If default ranking does not exists in localstorage, loads it.
 function loadRank() {
   if (!localStorage.getItem("ranking")) {
     for (var i = 0; i < defaultScore.length; i++) {
@@ -179,6 +183,7 @@ function loadRank() {
   }
 }
 
+// Creates a table in guess history with number input and result
 function resultTable() {
   var tableBody = document.getElementById("results"),
     newRow,
@@ -203,6 +208,7 @@ function resultTable() {
   resultHeader();
 }
 
+// Create table header for guess history table
 function resultHeader() {
   var tableBody = document.getElementById("results");
   var header = tableBody.createTHead();
