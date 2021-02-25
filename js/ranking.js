@@ -1,5 +1,6 @@
 let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
 
+// Create Rank Table based from local storage
 function updateTableHTML(myArray) {
   var tableBody = document.getElementById("tableRanking"),
     newRow,
@@ -29,6 +30,7 @@ function updateTableHTML(myArray) {
   }
 }
 
+// Create table header for ranks 
 function createHeader() {
   var tableBody = document.getElementById("tableRanking");
   var header = tableBody.createTHead();
